@@ -30,6 +30,13 @@ export FLASK_APP=flaskwork.py
 flask
 ```
 *查看执行命令*
+若要执行app/templates/xxx.html，则需要
+```
+export FLASK_APP=flaskwork.py
+export FLASK_ENV=development
+flask run
+```
+在页面中添加/auth/xxx或者/main/xxx
 
 测试
 ===

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>首页</title>
+    </head>
+
+    <body>
+        <div>
+            Hello,
+            {% if current_user.is_authenticated %}
+                {{ current_user.username }}
+            {% else %}
+                陌生人
+            {% endif %}!
+        </div>
+
+        <div>
+            <a href="/auth/logout">退出
+        </div>
+    </body>
+</html>

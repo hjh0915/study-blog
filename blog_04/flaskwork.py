@@ -22,6 +22,6 @@ def drop_db():
 @app.cli.command()
 def init_user():
     """创建用户"""
-    u = User(username='admin', password='1234', email='admin@qq.com')
+    u = User(username='admin', password='1234', email='admin@qq.com', role_id=2, location='江西南昌', about_me='a girl')
     db.session.add(u)
     db.session.commit()

@@ -1,6 +1,6 @@
-{% extends "base.html" %}
+{% extends "main/base.html" %}
 {% import "bootstrap/wtf.html" as wtf %}
-{% import "_macros.html" as macros %}
+{% import "main/_macros.html" as macros %}
 
 {% block title %}Flasky{% endblock %}
 
@@ -15,9 +15,9 @@
 </div>
 <div class="post-tabs">
     <ul class="nav nav-tabs">
-        <li{% if not show_followed %} class="active"{% endif %}><a href="{{ url_for('.show_all') }}">All</a></li>
+        <li{% if not show_followed %} class="active"{% endif %}><a href="{{ url_for('main.show_all') }}">All</a></li>
         {% if current_user.is_authenticated %}
-        <li{% if show_followed %} class="active"{% endif %}><a href="{{ url_for('.show_followed') }}">Followers</a></li>
+        <li{% if show_followed %} class="active"{% endif %}><a href="{{ url_for('main.show_followed') }}">Followers</a></li>
         {% endif %}
     </ul>
     {% include 'main/_posts.html' %}
@@ -31,5 +31,4 @@
 
 {% block scripts %}
 {{ super() }}
-{{ pagedown.include_pagedown() }}
 {% endblock %}

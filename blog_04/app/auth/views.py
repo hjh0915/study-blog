@@ -42,7 +42,8 @@ def login():
 
         if u.verify_password(password) and v == vcode:
             login_user(u)
-            return redirect('/main/show_users')
+            # return redirect('/main/show_user')
+            return render_template('main/index.html')
         else:
             return render_template('auth/login.html')
 

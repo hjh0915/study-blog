@@ -23,6 +23,7 @@ ALTER TABLE users ADD member_since timestamp;
 ALTER TABLE users ADD last_seen timestamp;
 ALTER TABLE users ADD avater_hash varchar(50);
 ALTER TABLE users ADD email varchar(50);
+ALTER TABLE users ADD confirmed boolean;
 
 创建传递数据库表
 =============
